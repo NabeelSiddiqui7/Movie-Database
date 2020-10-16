@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rowdies:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  background-image: url("../../img/bg.jpg");
+  background-size: cover;
+  background-position: top center;
+  color: white;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  flex: 1 1;
+  margin-top: 2em;
+  justify-content: center;
+}
+
+input {
+  display: inline-block;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-style: none;
+  border: 2px solid rgb(43, 0, 122);
+  padding: 6px 8px;
+}
+
+button {
+  background-color: #dfdfdf; /* Green */
+  border: none;
+  color: rgb(66, 66, 66);
+  padding: 0.5em 1em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+img {
+  width: 154px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+span {
+  font-weight: bold;
+}
+
+.logo-container {
+  text-align: center;
+  font-size: 2rem;
+  padding-top: 1em;
+  text-transform: uppercase;
+  font-family: "Rowdies", cursive;
+}
+
+.category {
+  color: white;
+  margin: 1em 0.5em 2em 0.5em;
+}
+
+.category h1 {
+  margin-left: 0.3em;
+  font-family: "Poppins", sans-serif;
+}
+
+.movies-container {
+  display: flex;
+  overflow-y: scroll;
+  height: 22em;
+}
+
+.movies-container::-webkit-scrollbar {
+  display: none;
+}
+
+.movie-link:hover {
+  background: rgba(0, 0, 0, 0.274);
+  transition: ease-in 0.2s;
+  cursor: pointer;
+}
+
+.movie {
+  text-align: center;
+  margin: 0.5em;
+  font-size: 1.5rem;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  max-width: 160px;
+}
+
+#back-button {
+  display: none;
+  margin: 2em 13% 0 13%;
+  font-family: "Poppins", sans-serif;
+}
+
+#back-button:hover {
+  cursor: pointer;
+}
+
+.backdrop-container {
+  margin: 1em 13% 0 13%;
+  min-height: 100px;
+  max-height: 400px;
+}
+#backdrop {
+  width: 100%;
+  max-height: inherit;
+  object-fit: cover;
+  object-position: top;
+}
+.info-container {
+  font-family: "Roboto", sans-serif;
+  margin: 0 13% 0 13%;
+  color: white;
+  background: rgba(0, 0, 0, 0.568);
+  padding: 1.5em;
+  position: relative;
+  bottom: 4em;
+}
+
+.info-container #film-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 2em;
+}
+
+.film-sub-info-container {
+  display: flex;
+  margin: 0 0 2em 0;
+}
+
+.film-sub-info-container p {
+  margin-right: 1em;
+}
+
+.film-description-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2em;
+}
+
+.film-description-container #film-description {
+  width: 50%;
+  align-self: center;
+  margin-bottom: auto;
+}
+
+.film-description-container #film-poster {
+  margin-right: 10%;
+}
+
+.info-container #film-cast-list {
+  margin: 1em 0 0 0;
+}
+
+#recommended-container {
+  margin: 0 11% 5em 11%;
+}
+
+#results-heading {
+  margin-top: 1em;
+  margin-left: 5em;
+  font-family: "Poppins", sans-serif;
+}
+
+.results-container {
+  font-family: "Roboto", sans-serif;
+  margin: 2em 10em;
+  background: rgba(0, 0, 0, 0.26);
+}
+
+.result {
+  display: flex;
+  padding: 1em 0;
+  border-bottom: rgba(255, 255, 255, 0.568) 1px solid;
+}
+
+.result:hover {
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.274);
+  transition: ease-in 0.2s;
+}
+
+.result img {
+  margin: 0 1em;
+}
+
+.result #result-title {
+  font-size: 2rem;
+}
+
+@media only screen and (max-width: 850px) {
+  .film-description-container img {
+    display: none;
+  }
+
+  .film-description-container #film-description {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .results-container {
+    margin: 2em 2em;
+  }
+
+  #results-heading {
+    margin-left: 1em;
+  }
+}
